@@ -29,6 +29,8 @@
     "bash-color": "0.0.4",
     "commander": "^2.9.0",
     "data.task": "^3.1.0",
+    "esprima": "^2.7.3",
+    "estraverse": "^4.2.0",
     "graphviz": "0.0.8",
     "ramda": "^0.22.1"
   }
