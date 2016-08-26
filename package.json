@@ -1,6 +1,6 @@
 {
   "name": "js2uml",
-  "version": "0.0.1",
+  "version": "0.1.0",
   "description": "Convert Js files to UML class diagrams",
   "main": "index.js",
   "bin": {

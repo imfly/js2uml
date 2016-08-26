@@ -1,37 +1,50 @@
-' private method 
-- attachApi : ()
-- get : (id, cb)
-- getByIds : (ids, cb)
-- list : (filter, cb)
-- createBasePathes : (cb)
-- installDependencies : (dApp, cb)
-- getInstalledIds : (cb)
-- removeDApp : (dApp, cb)
-- downloadDApp : (dApp, cb)
-- symlink : (dApp, cb)
-- apiHandler : (message, callback)
-- getFile : (dapp, res)
-- getIcon : (dapp, res)
-- dappRoutes : (dapp, cb)
-- launch : (body, cb)
-- downloadSiaFile : (id, ascii, icon, path, cb)
-- launchApp : (dApp, params, cb)
-- stop : (dApp, cb)
-- addTransactions : (req, cb)
+@startuml 
+skinparam BorderColor #blue9932CC 
+skinparam backgroundcolor AntiqueWhite/white 
+title 
+这里是标题
+end title 
+footer  copyright (c) imfly 2016.08.09 http://bitcoin-on-nodejs.ebookchain.org 
+header 《Nodejs开发加密货币》分析用图
 
-' public methods 
-+ sandboxApi: (call, args, cb)
-+ message: (dappid, body, cb)
-+ request: (dappid, method, path, query, cb)
-+ onBind: (scope)
-+ onBlockchainReady: ()
-+ onDeleteBlocksBefore: (block)
-+ onNewBlock: (block, broadcast)
+  Class DApps{ 
+    .. private methods ..
+    - attachApi : ()
+    - get : (id, cb)
+    - getByIds : (ids, cb)
+    - list : (filter, cb)
+    - createBasePathes : (cb)
+    - installDependencies : (dApp, cb)
+    - getInstalledIds : (cb)
+    - removeDApp : (dApp, cb)
+    - downloadDApp : (dApp, cb)
+    - symlink : (dApp, cb)
+    - apiHandler : (message, callback)
+    - getFile : (dapp, res)
+    - getIcon : (dapp, res)
+    - dappRoutes : (dapp, cb)
+    - launch : (body, cb)
+    - downloadSiaFile : (id, ascii, icon, path, cb)
+    - launchApp : (dApp, params, cb)
+    - stop : (dApp, cb)
+    - addTransactions : (req, cb)
 
-' shared method 
-+ getGenesis : (req, cb)
-+ setReady : (req, cb)
-+ getCommonBlock : (req, cb)
-+ sendWithdrawal : (req, cb)
-+ getWithdrawalLastTransaction : (req, cb)
-+ getBalanceTransactions : (req, cb)
+    .. public methods ..
+    + sandboxApi: (call, args, cb)
+    + message: (dappid, body, cb)
+    + request: (dappid, method, path, query, cb)
+    + onBind: (scope)
+    + onBlockchainReady: ()
+    + onDeleteBlocksBefore: (block)
+    + onNewBlock: (block, broadcast)
+
+    .. public Api(shared) ..
+    + getGenesis : (req, cb)
+    + setReady : (req, cb)
+    + getCommonBlock : (req, cb)
+    + sendWithdrawal : (req, cb)
+    + getWithdrawalLastTransaction : (req, cb)
+    + getBalanceTransactions : (req, cb)
+ } 
+
+@enduml
