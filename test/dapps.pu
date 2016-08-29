@@ -1,23 +1,73 @@
 [
-    {
-        "isASCII": "FunctionDeclaration"
-    },
-    {
-        "OutTransfer": "FunctionDeclaration"
-    },
-    {
-        "InTransfer": "FunctionDeclaration"
-    },
-    {
-        "DApp": "FunctionDeclaration"
-    },
-    {
-        "DApps": "FunctionDeclaration"
-    },
-    {
-        "remove": "FunctionDeclaration"
-    },
-    {
-        "error": "FunctionDeclaration"
-    }
+    [
+        {
+            "name": "isASCII"
+        }
+    ],
+    [
+        {
+            "name": "OutTransfer"
+        },
+        {
+            "name": "create"
+        },
+        {
+            "name": "calculateFee"
+        }
+    ],
+    [
+        {
+            "name": "DApps"
+        },
+        {
+            "name": "attachApi",
+            "visiable": "privated"
+        },
+        {
+            "name": "get",
+            "visiable": "privated"
+        },
+        {
+            "name": "getByIds",
+            "visiable": "privated"
+        },
+        {
+            "name": "symlink",
+            "visiable": "privated"
+        },
+        {
+            "name": "downloadSiaFile",
+            "visiable": "privated"
+        },
+        {
+            "name": "sandboxApi"
+        },
+        {
+            "name": "message"
+        },
+        {
+            "name": "onBind"
+        },
+        {
+            "name": "onBlockchainReady"
+        },
+        {
+            "name": "onDeleteBlocksBefore"
+        },
+        {
+            "name": "onNewBlock"
+        },
+        {
+            "name": "getGenesis",
+            "visiable": "shared"
+        },
+        {
+            "name": "setReady",
+            "visiable": "shared"
+        },
+        {
+            "name": "getCommonBlock",
+            "visiable": "shared"
+        }
+    ]
 ]
