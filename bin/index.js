@@ -4,7 +4,8 @@ var program = require("commander");
 var color = require('bash-color');
 
 var pkg = require("../package.json");
-var js2pu = require("../lib/pu.js")
+var js2pu = require("../lib/")
+
 function list(val) {
   return val.split(',');
 }
