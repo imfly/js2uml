@@ -1,73 +1,149 @@
-[
+@startuml 
+skinparam BorderColor #blue9932CC 
+skinparam backgroundcolor AntiqueWhite/white 
+title 
+这里是标题
+end title 
+footer  copyright (c) imfly 2016.08.09 http://bitcoin-on-nodejs.ebookchain.org 
+header 《Nodejs开发加密货币》分析用图
+
+  [
     [
         {
-            "name": "isASCII"
+            "name": "isASCII",
+            "params": [
+                "str",
+                "extended"
+            ]
         }
     ],
     [
         {
-            "name": "OutTransfer"
+            "name": "OutTransfer",
+            "params": []
         },
         {
-            "name": "create"
+            "name": "create",
+            "params": [
+                "data",
+                "trs"
+            ],
+            "visiable": "Public"
         },
         {
-            "name": "calculateFee"
+            "name": "calculateFee",
+            "params": [
+                "trs",
+                "sender"
+            ],
+            "visiable": "Public"
         }
     ],
     [
         {
-            "name": "DApps"
+            "name": "DApps",
+            "params": [
+                "cb",
+                "scope"
+            ]
         },
         {
             "name": "attachApi",
+            "params": [],
             "visiable": "privated"
+        },
+        {
+            "package": "library",
+            "lib": "network"
         },
         {
             "name": "get",
+            "params": [
+                "id",
+                "cb"
+            ],
             "visiable": "privated"
+        },
+        {
+            "package": "library",
+            "lib": "dbLite"
         },
         {
             "name": "getByIds",
+            "params": [
+                "ids",
+                "cb"
+            ],
             "visiable": "privated"
         },
         {
-            "name": "symlink",
-            "visiable": "privated"
+            "package": "library",
+            "lib": "dbLite"
         },
         {
             "name": "downloadSiaFile",
+            "params": [
+                "id",
+                "ascii",
+                "icon",
+                "path",
+                "cb"
+            ],
             "visiable": "privated"
         },
         {
-            "name": "sandboxApi"
+            "package": "modules",
+            "lib": "sia"
         },
         {
-            "name": "message"
+            "name": "message",
+            "params": [
+                "dappid",
+                "body",
+                "cb"
+            ],
+            "visiable": "Public"
         },
         {
-            "name": "onBind"
+            "name": "onBind",
+            "params": [
+                "scope"
+            ],
+            "visiable": "Public"
         },
         {
-            "name": "onBlockchainReady"
+            "name": "onBlockchainReady",
+            "params": [],
+            "visiable": "Public"
         },
         {
-            "name": "onDeleteBlocksBefore"
-        },
-        {
-            "name": "onNewBlock"
+            "name": "onNewBlock",
+            "params": [
+                "block",
+                "broadcast"
+            ],
+            "visiable": "Public"
         },
         {
             "name": "getGenesis",
+            "params": [
+                "req",
+                "cb"
+            ],
             "visiable": "shared"
+        },
+        {
+            "package": "library",
+            "lib": "dbLite"
         },
         {
             "name": "setReady",
-            "visiable": "shared"
-        },
-        {
-            "name": "getCommonBlock",
+            "params": [
+                "req",
+                "cb"
+            ],
             "visiable": "shared"
         }
     ]
 ]
+@enduml
