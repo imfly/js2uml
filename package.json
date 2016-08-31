@@ -32,8 +32,8 @@
     "data.task": "^3.1.0",
     "esprima": "^2.7.3",
     "estraverse": "^4.2.0",
-    "graphviz": "0.0.8",
     "moment": "^2.14.1",
+    "node-plantuml": "^0.4.4",
     "ramda": "^0.22.1"
   }
 }
