@@ -4,7 +4,7 @@ var program = require("commander");
 var color = require('bash-color');
 
 var pkg = require("../package.json");
-var js2pu = require("../lib/")
+var js2uml = require("../lib/")
 
 function list(val) {
   return val.split(',');
@@ -19,7 +19,7 @@ program
   .option("-r, --root [string]", "root folder, default is `.`")
   .option("-o, --outputfile [string]", "output file, defaut is `./methodName.pu`")
   .action(function(options) {
-      summary(options);
+      js2uml(options);
   });
 
 // Parse and fallback to help if no args

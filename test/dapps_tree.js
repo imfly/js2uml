@@ -2378,6 +2378,624 @@
                     "type": "MemberExpression",
                     "computed": false,
                     "object": {
+                        "type": "Identifier",
+                        "name": "privated"
+                    },
+                    "property": {
+                        "type": "Identifier",
+                        "name": "removeDApp"
+                    }
+                },
+                "right": {
+                    "type": "FunctionExpression",
+                    "id": null,
+                    "params": [
+                        {
+                            "type": "Identifier",
+                            "name": "dApp"
+                        },
+                        {
+                            "type": "Identifier",
+                            "name": "cb"
+                        }
+                    ],
+                    "defaults": [],
+                    "body": {
+                        "type": "BlockStatement",
+                        "body": [
+                            {
+                                "type": "VariableDeclaration",
+                                "declarations": [
+                                    {
+                                        "type": "VariableDeclarator",
+                                        "id": {
+                                            "type": "Identifier",
+                                            "name": "dappPath"
+                                        },
+                                        "init": {
+                                            "type": "CallExpression",
+                                            "callee": {
+                                                "type": "MemberExpression",
+                                                "computed": false,
+                                                "object": {
+                                                    "type": "Identifier",
+                                                    "name": "path"
+                                                },
+                                                "property": {
+                                                    "type": "Identifier",
+                                                    "name": "join"
+                                                }
+                                            },
+                                            "arguments": [
+                                                {
+                                                    "type": "MemberExpression",
+                                                    "computed": false,
+                                                    "object": {
+                                                        "type": "Identifier",
+                                                        "name": "privated"
+                                                    },
+                                                    "property": {
+                                                        "type": "Identifier",
+                                                        "name": "dappsPath"
+                                                    }
+                                                },
+                                                {
+                                                    "type": "MemberExpression",
+                                                    "computed": false,
+                                                    "object": {
+                                                        "type": "Identifier",
+                                                        "name": "dApp"
+                                                    },
+                                                    "property": {
+                                                        "type": "Identifier",
+                                                        "name": "transactionId"
+                                                    }
+                                                }
+                                            ]
+                                        }
+                                    }
+                                ],
+                                "kind": "var"
+                            },
+                            {
+                                "type": "FunctionDeclaration",
+                                "id": {
+                                    "type": "Identifier",
+                                    "name": "remove"
+                                },
+                                "params": [
+                                    {
+                                        "type": "Identifier",
+                                        "name": "err"
+                                    }
+                                ],
+                                "defaults": [],
+                                "body": {
+                                    "type": "BlockStatement",
+                                    "body": [
+                                        {
+                                            "type": "IfStatement",
+                                            "test": {
+                                                "type": "Identifier",
+                                                "name": "err"
+                                            },
+                                            "consequent": {
+                                                "type": "BlockStatement",
+                                                "body": [
+                                                    {
+                                                        "type": "ExpressionStatement",
+                                                        "expression": {
+                                                            "type": "CallExpression",
+                                                            "callee": {
+                                                                "type": "MemberExpression",
+                                                                "computed": false,
+                                                                "object": {
+                                                                    "type": "MemberExpression",
+                                                                    "computed": false,
+                                                                    "object": {
+                                                                        "type": "Identifier",
+                                                                        "name": "library"
+                                                                    },
+                                                                    "property": {
+                                                                        "type": "Identifier",
+                                                                        "name": "logger"
+                                                                    }
+                                                                },
+                                                                "property": {
+                                                                    "type": "Identifier",
+                                                                    "name": "error"
+                                                                }
+                                                            },
+                                                            "arguments": [
+                                                                {
+                                                                    "type": "BinaryExpression",
+                                                                    "operator": "+",
+                                                                    "left": {
+                                                                        "type": "Literal",
+                                                                        "value": "Failed to uninstall dapp: ",
+                                                                        "raw": "\"Failed to uninstall dapp: \""
+                                                                    },
+                                                                    "right": {
+                                                                        "type": "Identifier",
+                                                                        "name": "err"
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "alternate": null
+                                        },
+                                        {
+                                            "type": "ExpressionStatement",
+                                            "expression": {
+                                                "type": "CallExpression",
+                                                "callee": {
+                                                    "type": "Identifier",
+                                                    "name": "rmdir"
+                                                },
+                                                "arguments": [
+                                                    {
+                                                        "type": "Identifier",
+                                                        "name": "dappPath"
+                                                    },
+                                                    {
+                                                        "type": "FunctionExpression",
+                                                        "id": null,
+                                                        "params": [
+                                                            {
+                                                                "type": "Identifier",
+                                                                "name": "err"
+                                                            }
+                                                        ],
+                                                        "defaults": [],
+                                                        "body": {
+                                                            "type": "BlockStatement",
+                                                            "body": [
+                                                                {
+                                                                    "type": "IfStatement",
+                                                                    "test": {
+                                                                        "type": "Identifier",
+                                                                        "name": "err"
+                                                                    },
+                                                                    "consequent": {
+                                                                        "type": "BlockStatement",
+                                                                        "body": [
+                                                                            {
+                                                                                "type": "ReturnStatement",
+                                                                                "argument": {
+                                                                                    "type": "CallExpression",
+                                                                                    "callee": {
+                                                                                        "type": "Identifier",
+                                                                                        "name": "setImmediate"
+                                                                                    },
+                                                                                    "arguments": [
+                                                                                        {
+                                                                                            "type": "Identifier",
+                                                                                            "name": "cb"
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "BinaryExpression",
+                                                                                            "operator": "+",
+                                                                                            "left": {
+                                                                                                "type": "Literal",
+                                                                                                "value": "Failed to remove dapp folder: ",
+                                                                                                "raw": "\"Failed to remove dapp folder: \""
+                                                                                            },
+                                                                                            "right": {
+                                                                                                "type": "Identifier",
+                                                                                                "name": "err"
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "alternate": {
+                                                                        "type": "BlockStatement",
+                                                                        "body": [
+                                                                            {
+                                                                                "type": "ReturnStatement",
+                                                                                "argument": {
+                                                                                    "type": "CallExpression",
+                                                                                    "callee": {
+                                                                                        "type": "Identifier",
+                                                                                        "name": "cb"
+                                                                                    },
+                                                                                    "arguments": []
+                                                                                }
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        "generator": false,
+                                                        "expression": false
+                                                    }
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                "generator": false,
+                                "expression": false
+                            },
+                            {
+                                "type": "ExpressionStatement",
+                                "expression": {
+                                    "type": "CallExpression",
+                                    "callee": {
+                                        "type": "MemberExpression",
+                                        "computed": false,
+                                        "object": {
+                                            "type": "Identifier",
+                                            "name": "fs"
+                                        },
+                                        "property": {
+                                            "type": "Identifier",
+                                            "name": "exists"
+                                        }
+                                    },
+                                    "arguments": [
+                                        {
+                                            "type": "Identifier",
+                                            "name": "dappPath"
+                                        },
+                                        {
+                                            "type": "FunctionExpression",
+                                            "id": null,
+                                            "params": [
+                                                {
+                                                    "type": "Identifier",
+                                                    "name": "exists"
+                                                }
+                                            ],
+                                            "defaults": [],
+                                            "body": {
+                                                "type": "BlockStatement",
+                                                "body": [
+                                                    {
+                                                        "type": "IfStatement",
+                                                        "test": {
+                                                            "type": "UnaryExpression",
+                                                            "operator": "!",
+                                                            "argument": {
+                                                                "type": "Identifier",
+                                                                "name": "exists"
+                                                            },
+                                                            "prefix": true
+                                                        },
+                                                        "consequent": {
+                                                            "type": "BlockStatement",
+                                                            "body": [
+                                                                {
+                                                                    "type": "ReturnStatement",
+                                                                    "argument": {
+                                                                        "type": "CallExpression",
+                                                                        "callee": {
+                                                                            "type": "Identifier",
+                                                                            "name": "setImmediate"
+                                                                        },
+                                                                        "arguments": [
+                                                                            {
+                                                                                "type": "Identifier",
+                                                                                "name": "cb"
+                                                                            },
+                                                                            {
+                                                                                "type": "Literal",
+                                                                                "value": "Dapp not found",
+                                                                                "raw": "\"Dapp not found\""
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        },
+                                                        "alternate": {
+                                                            "type": "BlockStatement",
+                                                            "body": [
+                                                                {
+                                                                    "type": "TryStatement",
+                                                                    "block": {
+                                                                        "type": "BlockStatement",
+                                                                        "body": [
+                                                                            {
+                                                                                "type": "VariableDeclaration",
+                                                                                "declarations": [
+                                                                                    {
+                                                                                        "type": "VariableDeclarator",
+                                                                                        "id": {
+                                                                                            "type": "Identifier",
+                                                                                            "name": "blockchain"
+                                                                                        },
+                                                                                        "init": {
+                                                                                            "type": "CallExpression",
+                                                                                            "callee": {
+                                                                                                "type": "Identifier",
+                                                                                                "name": "require"
+                                                                                            },
+                                                                                            "arguments": [
+                                                                                                {
+                                                                                                    "type": "CallExpression",
+                                                                                                    "callee": {
+                                                                                                        "type": "MemberExpression",
+                                                                                                        "computed": false,
+                                                                                                        "object": {
+                                                                                                            "type": "Identifier",
+                                                                                                            "name": "path"
+                                                                                                        },
+                                                                                                        "property": {
+                                                                                                            "type": "Identifier",
+                                                                                                            "name": "join"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "arguments": [
+                                                                                                        {
+                                                                                                            "type": "Identifier",
+                                                                                                            "name": "dappPath"
+                                                                                                        },
+                                                                                                        {
+                                                                                                            "type": "Literal",
+                                                                                                            "value": "blockchain.json",
+                                                                                                            "raw": "'blockchain.json'"
+                                                                                                        }
+                                                                                                    ]
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                ],
+                                                                                "kind": "var"
+                                                                            }
+                                                                        ]
+                                                                    },
+                                                                    "guardedHandlers": [],
+                                                                    "handlers": [
+                                                                        {
+                                                                            "type": "CatchClause",
+                                                                            "param": {
+                                                                                "type": "Identifier",
+                                                                                "name": "e"
+                                                                            },
+                                                                            "body": {
+                                                                                "type": "BlockStatement",
+                                                                                "body": [
+                                                                                    {
+                                                                                        "type": "ReturnStatement",
+                                                                                        "argument": {
+                                                                                            "type": "CallExpression",
+                                                                                            "callee": {
+                                                                                                "type": "Identifier",
+                                                                                                "name": "remove"
+                                                                                            },
+                                                                                            "arguments": [
+                                                                                                {
+                                                                                                    "type": "CallExpression",
+                                                                                                    "callee": {
+                                                                                                        "type": "MemberExpression",
+                                                                                                        "computed": false,
+                                                                                                        "object": {
+                                                                                                            "type": "Identifier",
+                                                                                                            "name": "e"
+                                                                                                        },
+                                                                                                        "property": {
+                                                                                                            "type": "Identifier",
+                                                                                                            "name": "toString"
+                                                                                                        }
+                                                                                                    },
+                                                                                                    "arguments": []
+                                                                                                }
+                                                                                            ]
+                                                                                        }
+                                                                                    }
+                                                                                ]
+                                                                            }
+                                                                        }
+                                                                    ],
+                                                                    "handler": {
+                                                                        "type": "CatchClause",
+                                                                        "param": {
+                                                                            "type": "Identifier",
+                                                                            "name": "e"
+                                                                        },
+                                                                        "body": {
+                                                                            "type": "BlockStatement",
+                                                                            "body": [
+                                                                                {
+                                                                                    "type": "ReturnStatement",
+                                                                                    "argument": {
+                                                                                        "type": "CallExpression",
+                                                                                        "callee": {
+                                                                                            "type": "Identifier",
+                                                                                            "name": "remove"
+                                                                                        },
+                                                                                        "arguments": [
+                                                                                            {
+                                                                                                "type": "CallExpression",
+                                                                                                "callee": {
+                                                                                                    "type": "MemberExpression",
+                                                                                                    "computed": false,
+                                                                                                    "object": {
+                                                                                                        "type": "Identifier",
+                                                                                                        "name": "e"
+                                                                                                    },
+                                                                                                    "property": {
+                                                                                                        "type": "Identifier",
+                                                                                                        "name": "toString"
+                                                                                                    }
+                                                                                                },
+                                                                                                "arguments": []
+                                                                                            }
+                                                                                        ]
+                                                                                    }
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "finalizer": null
+                                                                },
+                                                                {
+                                                                    "type": "ExpressionStatement",
+                                                                    "expression": {
+                                                                        "type": "CallExpression",
+                                                                        "callee": {
+                                                                            "type": "MemberExpression",
+                                                                            "computed": false,
+                                                                            "object": {
+                                                                                "type": "MemberExpression",
+                                                                                "computed": false,
+                                                                                "object": {
+                                                                                    "type": "Identifier",
+                                                                                    "name": "modules"
+                                                                                },
+                                                                                "property": {
+                                                                                    "type": "Identifier",
+                                                                                    "name": "sql"
+                                                                                }
+                                                                            },
+                                                                            "property": {
+                                                                                "type": "Identifier",
+                                                                                "name": "dropTables"
+                                                                            }
+                                                                        },
+                                                                        "arguments": [
+                                                                            {
+                                                                                "type": "MemberExpression",
+                                                                                "computed": false,
+                                                                                "object": {
+                                                                                    "type": "Identifier",
+                                                                                    "name": "dApp"
+                                                                                },
+                                                                                "property": {
+                                                                                    "type": "Identifier",
+                                                                                    "name": "transactionId"
+                                                                                }
+                                                                            },
+                                                                            {
+                                                                                "type": "Identifier",
+                                                                                "name": "blockchain"
+                                                                            },
+                                                                            {
+                                                                                "type": "FunctionExpression",
+                                                                                "id": null,
+                                                                                "params": [
+                                                                                    {
+                                                                                        "type": "Identifier",
+                                                                                        "name": "err"
+                                                                                    }
+                                                                                ],
+                                                                                "defaults": [],
+                                                                                "body": {
+                                                                                    "type": "BlockStatement",
+                                                                                    "body": [
+                                                                                        {
+                                                                                            "type": "IfStatement",
+                                                                                            "test": {
+                                                                                                "type": "Identifier",
+                                                                                                "name": "err"
+                                                                                            },
+                                                                                            "consequent": {
+                                                                                                "type": "BlockStatement",
+                                                                                                "body": [
+                                                                                                    {
+                                                                                                        "type": "ExpressionStatement",
+                                                                                                        "expression": {
+                                                                                                            "type": "CallExpression",
+                                                                                                            "callee": {
+                                                                                                                "type": "MemberExpression",
+                                                                                                                "computed": false,
+                                                                                                                "object": {
+                                                                                                                    "type": "MemberExpression",
+                                                                                                                    "computed": false,
+                                                                                                                    "object": {
+                                                                                                                        "type": "Identifier",
+                                                                                                                        "name": "library"
+                                                                                                                    },
+                                                                                                                    "property": {
+                                                                                                                        "type": "Identifier",
+                                                                                                                        "name": "logger"
+                                                                                                                    }
+                                                                                                                },
+                                                                                                                "property": {
+                                                                                                                    "type": "Identifier",
+                                                                                                                    "name": "error"
+                                                                                                                }
+                                                                                                            },
+                                                                                                            "arguments": [
+                                                                                                                {
+                                                                                                                    "type": "BinaryExpression",
+                                                                                                                    "operator": "+",
+                                                                                                                    "left": {
+                                                                                                                        "type": "Literal",
+                                                                                                                        "value": "Failed to drop dapp tables: ",
+                                                                                                                        "raw": "\"Failed to drop dapp tables: \""
+                                                                                                                    },
+                                                                                                                    "right": {
+                                                                                                                        "type": "Identifier",
+                                                                                                                        "name": "err"
+                                                                                                                    }
+                                                                                                                }
+                                                                                                            ]
+                                                                                                        }
+                                                                                                    }
+                                                                                                ]
+                                                                                            },
+                                                                                            "alternate": null
+                                                                                        },
+                                                                                        {
+                                                                                            "type": "ExpressionStatement",
+                                                                                            "expression": {
+                                                                                                "type": "CallExpression",
+                                                                                                "callee": {
+                                                                                                    "type": "Identifier",
+                                                                                                    "name": "remove"
+                                                                                                },
+                                                                                                "arguments": [
+                                                                                                    {
+                                                                                                        "type": "Identifier",
+                                                                                                        "name": "err"
+                                                                                                    }
+                                                                                                ]
+                                                                                            }
+                                                                                        }
+                                                                                    ]
+                                                                                },
+                                                                                "generator": false,
+                                                                                "expression": false
+                                                                            }
+                                                                        ]
+                                                                    }
+                                                                }
+                                                            ]
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            "generator": false,
+                                            "expression": false
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    },
+                    "generator": false,
+                    "expression": false
+                }
+            }
+        },
+        {
+            "type": "ExpressionStatement",
+            "expression": {
+                "type": "AssignmentExpression",
+                "operator": "=",
+                "left": {
+                    "type": "MemberExpression",
+                    "computed": false,
+                    "object": {
                         "type": "MemberExpression",
                         "computed": false,
                         "object": {
