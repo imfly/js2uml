@@ -2,27 +2,36 @@
 
 var program = require("commander");
 var color = require('bash-color');
+var _ = require('ramda');
 
 var pkg = require("../package.json");
-var js2uml = require("../lib/")
+var config = require('../lib/config.js');
+var Js2uml = require("../lib/");
 
-function list(val) {
-  return val.split(',');
+program
+    .version(pkg.version)
+    .option("-b, --borderColor [string]", "border color, default is `#blue\9932CC`")
+    .option("-f, --footer [string]", "The uml's footer description.")
+    .option("-g, --backgroundcolor [string]", "background color, default is `AntiqueWhite/white`")
+    .option("-h, --header [string]", "The uml's header description.")
+    .option("-o, --outputFile [string]", "output file, defaut is `./methodName.pu`")
+    .option("-s, --sourceFile <string>", "sourceFile, required")
+    .option("-t, --title [string]", "The uml's title.")
+    .parse(process.argv);
+
+clone(program, config);
+
+function clone(options, config) {
+    for (key in config) {
+        if (options[key]) {
+            config[key] = options[key];
+        };
+    }
 }
 
-program
-  .version(pkg.version)
+Js2uml(config);
+if (config.sourceFile) {
 
-program
-  .command("js2uml")
-  .description("Generate a UML from a js file")
-  .option("-r, --root [string]", "root folder, default is `.`")
-  .option("-o, --outputfile [string]", "output file, defaut is `./methodName.pu`")
-  .action(function(options) {
-      js2uml(options);
-  });
-
-// Parse and fallback to help if no args
-if (typeof(program.parse(process.argv).args) === "undefined" && process.argv.length === 2) {
-  program.help();
+}else{
+  
 }
