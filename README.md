@@ -57,6 +57,8 @@ $ js2uml --help
 
 亿书官方QQ群：185046161（亿书完全开源开放，欢迎各界小伙伴参与）
 
+区块链俱乐部公众号：chainclub
+
 ## 协议（License)
 
 MIT License 2016 @imfly
