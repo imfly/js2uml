@@ -28,12 +28,12 @@
   "homepage": "https://github.com/imfly/js2uml#readme",
   "dependencies": {
     "bash-color": "0.0.4",
-    "commander": "^2.9.0",
-    "data.task": "^3.1.0",
-    "esprima": "^2.7.3",
-    "estraverse": "^4.2.0",
-    "moment": "^2.14.1",
-    "node-plantuml": "^0.4.4",
-    "ramda": "^0.22.1"
+    "commander": "^6.1.0",
+    "data.task": "^3.1.2",
+    "esprima": "^4.0.1",
+    "estraverse": "^5.2.0",
+    "moment": "^2.29.0",
+    "node-plantuml": "^0.9.0",
+    "ramda": "^0.27.1"
   }
 }
