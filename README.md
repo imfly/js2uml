@@ -9,7 +9,7 @@ A CLI for converting JS to UML class diagrams.
 
 通过js文件产生Uml类图的命令行工具。详细开发文档：<https://github.com/imfly/bitcoin-on-nodejs/blob/master/4-开发实践/7-方法论/6-轻松从Js文件生成UML类图.md>
 
-[《旧版电子书》][] 系列文章里用到的大量js类图，都来自于这个小工具。比如：
+[《Nodejs区块链开发》][] 系列文章里用到的大量js类图，都来自于这个小工具。比如：
 
 ![dapps.png](./test/dapps.png)
 
