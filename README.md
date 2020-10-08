@@ -55,21 +55,13 @@ $ js2uml --help
 
 ## 关于(About)
 
-作者微信：kubying
+DDN区块链：面向企业的区块链系统
 
-[《Nodejs开发加密货币》][] 是亿书开发文档，相关资源：
-
-源文地址： https://github.com/imfly/bitcoin-on-nodejs
-
-亿书官网： http://ebookchain.org
-
-亿书官方QQ群：185046161（亿书完全开源开放，欢迎各界小伙伴参与）
-
-区块链俱乐部公众号：chainclub
+网址：<https://github.com/ddnlink/ddn>
 
 ## 协议（License)
 
 MIT License 2016 @imfly
 
-[《Nodejs开发加密货币》]: https://github.com/imfly/bitcoin-on-nodejs
+[《Nodejs区块链开发》]: https://github.com/imfly/bitcoin-on-nodejs
 [Graphviz]: http://www.graphviz.org/
