@@ -25,6 +25,7 @@ program
     .option("-h, --header [string]", "The uml's header description.")
     .option("-o, --output [string]", "output file")
     .option("-t, --title [string]", "The uml's title.")
+    .option("-v, --verbose", "Print the final result in console.")
     .parse(process.argv);
 
 clone(program, config);
